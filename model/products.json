@@ -1,0 +1,39 @@
+ [
+    {
+        "name": "apple",
+        "price": 150,
+        "discription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget semper metus. Vestibulum convallis arcu et nisl bibendum gravida. Suspendisse eu interdum augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin faucibus arcu a blandit dignissim. Mauris pretium, tortor ut venenatis imperdiet, nibh magna sollicitudin elit, non hendrerit sem lectus at magna. Aliquam cursus fermentum nibh sit amet semper. Maecenas at porta ligula. Praesent interdum sagittis odio, sed egestas dolor tempor ut. Sed at est in magna scelerisque commodo. Proin ultricies urna eu dignissim commodo. Maecenas fringilla quis augue ac dictum.",
+        "locate":"apple"
+    },
+    
+    {
+        "name": "kiwi",
+        "price": 99,
+        "discription": "Sed quis lectus nec diam elementum ornare et eu urna. Donec consequat nulla tincidunt magna pulvinar, a malesuada felis scelerisque. Duis non leo et urna elementum luctus eu ut diam. Mauris venenatis ut ante a ultrices. Mauris eget erat a tellus tempor consectetur. Praesent a ullamcorper felis. Duis ac mi mattis, venenatis nibh tincidunt, volutpat eros.",
+        "locate":"kiwi"
+    },
+    {
+        "name": "avocado",
+        "price": 200,
+        "discription": "Suspendisse ac neque ac ipsum rhoncus eleifend vel in metus. Donec vel massa ornare felis fermentum cursus vitae eget felis. Nullam luctus tellus vel est rutrum, in tincidunt ipsum pharetra. Fusce lobortis ligula non neque ultricies, at aliquam purus faucibus. Donec condimentum turpis erat, placerat sodales libero imperdiet eget. Vivamus rutrum velit sit amet nisl tincidunt gravida. Nam viverra elementum lectus vitae molestie. Donec vitae elementum lacus. Duis imperdiet vestibulum laoreet. Quisque eget mi neque. Quisque ultricies nulla et massa feugiat, sit amet aliquam tortor ullamcorper. Praesent auctor enim a elit egestas sollicitudin. Curabitur sem justo, dapibus vitae lorem in, maximus blandit elit. Curabitur ac consequat nibh. Quisque augue nunc, facilisis eu tristique quis, volutpat convallis quam.",
+        "locate":"avocado"
+    },
+    {
+        "name": "orange",
+        "price": 34,
+        "discription": "Sed sit amet aliquam urna, sit amet laoreet nibh. Vivamus hendrerit felis non rutrum dapibus. Pellentesque mauris augue, tempus vel tempor in, blandit vehicula odio. Etiam semper dapibus lectus ac pellentesque. Morbi vel enim at metus commodo tempus consequat ac metus. Vestibulum nec ante sit amet nisi bibendum lacinia ut eget dui. Mauris condimentum non dui a varius. Morbi at commodo risus. Sed vel ex mauris. Sed fringilla augue in quam malesuada, vitae egestas velit efficitur. Proin varius ante sit amet nulla consectetur congue. Pellentesque et dui vitae lectus imperdiet pellentesque.",
+        "locate":"orange"
+    },
+    {
+        "name": "peach",
+        "price": 77,
+        "discription": "In hac habitasse platea dictumst. Etiam sodales fermentum mi id luctus. Etiam laoreet velit vestibulum turpis maximus, vel rutrum ex semper. Suspendisse bibendum nunc eros, sit amet bibendum lectus viverra in. Phasellus porttitor arcu lorem. Nunc vulputate placerat fermentum. Nulla facilisis purus id ante aliquet, ac facilisis nibh tincidunt. Etiam non tristique arcu, eu blandit urna. Nulla mattis at lectus sit amet consequat. Nam eu dolor pharetra, gravida dolor non, ornare quam.",
+        "locate":"peach"
+    },
+    {
+        "name": "pear",
+        "price": 250,
+        "discription": "Aenean vestibulum sem sit amet dictum laoreet. Sed maximus rhoncus dapibus. Integer ullamcorper libero nec leo facilisis rhoncus. Phasellus in efficitur purus, nec semper ante. Integer facilisis porttitor molestie. Maecenas laoreet purus non ligula sollicitudin fringilla. Sed tempus urna sit amet augue efficitur hendrerit. Sed in rutrum dolor. Donec interdum purus rhoncus diam vehicula pretium. Nam laoreet turpis at velit vulputate, id mattis neque commodo. Nullam faucibus nibh lacus. Vivamus dignissim orci nec orci placerat, ac volutpat elit lobortis. Nunc non lacus in nulla efficitur eleifend sed at enim.",
+        "locate":"pear"
+    }
+  ]
