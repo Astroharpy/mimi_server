@@ -1,9 +1,8 @@
+require("dotenv").config()
 const app = require("express")()
 
-const PORT = 3000
-
-app.get('/', (req, res)=>{
-    res.send(`<h1>Welcome ice </h1>`)
+app.get("/", (req, res)=>{
+    res.send(`welcome ${process.env.ICE}`)
 })
 
-app.listen(PORT, ()=> console.log(`The app is running on port : ${PORT}`))
+app.listen(3001, ()=> console.log("The app is running"))
