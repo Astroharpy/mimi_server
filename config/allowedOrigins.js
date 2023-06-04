@@ -1,7 +1,8 @@
 const allowedOrigins = [
     'http://evergreenpasture.co.za/',
     'https://evergreenpasture.co.za/',
-    'http://192.168.43.159:3000'
+    'http://192.168.43.159:3000',
+    'https://melodic-mousse-1f9038.netlify.app/'
 ];
 
 module.exports = allowedOrigins;
