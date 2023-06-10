@@ -74,7 +74,7 @@ router.get('/return', (req, res)=>{
   res.send("<h1>Welcome back</h1>")
 })
 
-router.get('/notify', async(req, res)=>{
+router.post('/notify', async(req, res)=>{
   log(req.body)
   res.sendStatus(200)
 
