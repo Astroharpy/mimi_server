@@ -75,8 +75,8 @@ router.get('/return', (req, res)=>{
 })
 
 router.get('/notify', async(req, res)=>{
-  log("hello")
-  res.send("hi")
+  log(req.body)
+  res.status(200)
 
 })
  
