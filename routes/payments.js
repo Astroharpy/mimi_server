@@ -76,7 +76,7 @@ router.get('/return', (req, res)=>{
 
 router.get('/notify', async(req, res)=>{
   log(req.body)
-  res.status(200)
+  res.sendStatus(200)
 
 })
  
