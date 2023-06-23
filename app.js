@@ -41,6 +41,9 @@ app.get('/', async (req,res)=>{
     
 })
 
+app.get("/me", (req, res) =>{
+    res.send("test")
+})
 
 
 app.all("*",(req,res)=>{
