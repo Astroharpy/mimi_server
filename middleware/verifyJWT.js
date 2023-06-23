@@ -15,8 +15,6 @@ const verifyJwT = (req, res, next) =>{
             //decoded username
             req.user = decoded.username;
             //exeriment to carry cart data over to the front-end
-            req.cart = decoded.cart;
-            // console.log(decoded);
             next()
         }
     )

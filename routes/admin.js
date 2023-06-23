@@ -2,6 +2,11 @@ const express = require('express')
 const ImageKit = require("imagekit");
 const router = express.Router()
 const Product = require('../model/Product')
+const Order = require('../model/Order')
+const authController = require("../controllers/authController")
+const logoutController = require("../controllers/logoutController")
+const verifyJwT = require("../middleware/verifyJWT")
+const {log} = require("console")
 
 const imagekit = new ImageKit({
   publicKey : process.env.PUBLIC_KEY,
@@ -10,13 +15,13 @@ const imagekit = new ImageKit({
 });
 
 
-router.get('/admin/new-product', async (req, res) =>{
+router.get('/admin/new-product', verifyJwT,async (req, res) =>{
   var authenticationParameters = imagekit.getAuthenticationParameters();
-  console.log(authenticationParameters);
+  log(authenticationParameters);
   res.json(authenticationParameters);
 })
 
-router.post('/admin/new-product', async (req, res)=>{
+router.post('/admin/new-product', verifyJwT , async (req, res)=>{
   try {
     const {name, price, quantity, description, url} = req.body
 
@@ -34,6 +39,22 @@ router.post('/admin/new-product', async (req, res)=>{
     console.error(err)
     res.json({error : "error"})
   }
+})
+
+// getting all the orders that have been paid for 
+router.post('/login', authController)
+router.post("/logout", logoutController)
+
+router.get('/admin/orders', verifyJwT ,async (req, res)=>{
+  try {
+    const results = await Order.find({paid: true})
+    
+    res.json(results)
+  } catch (error) {
+    log(error)
+    res.send("failed")
+  }
+  
 })
 
 module.exports = router
