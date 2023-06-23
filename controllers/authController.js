@@ -16,7 +16,7 @@ const loginHandle = async (req, res)=>{
         if(!comparePwd) return res.status(400).json({'message':`Wrong username and password combination`})
         //creating jwts
         const accessToken = jwt.sign(
-            {"username": matchUser.username,"cart":matchUser.cart},
+            {"username": matchUser.username},
             process.env.ACCESS_TOKEN_SECRET,
             {expiresIn: '15m'}
         )

@@ -1,7 +1,7 @@
 require("dotenv").config();
 const express = require("express")
 const app = express()
-const PORT = 8080
+const PORT = process.env.PORT || 8000
 const credentials = require('./middleware/credentials');
 const corsOptions = require('./config/corsOption');
 const cors = require('cors')
@@ -15,6 +15,7 @@ const connectDB = require('./config/dbConn')
 connectDB()
 
 const Product = require('./model/Product')
+const Order = require('./model/Order')
 
 //middleware
 app.use(credentials);
@@ -22,6 +23,7 @@ app.use(cors(corsOptions));
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+
 
 //admin route
 app.use(admin)
@@ -32,7 +34,6 @@ app.use(payments)
 
 app.get('/', async (req,res)=>{
     try {
-        console.log("pinged")
         const products = await Product.find({})
         res.status(200).json(products)
     } catch (error) {
@@ -41,9 +42,8 @@ app.get('/', async (req,res)=>{
     
 })
 
-app.get("/me", (req, res) =>{
-    res.send("test")
-})
+
+
 
 
 app.all("*",(req,res)=>{
@@ -57,5 +57,4 @@ mongoose.connection.once('open', ()=>{
         console.log(`The Server is running on port : ${PORT}`);
     })
 })
-
 
