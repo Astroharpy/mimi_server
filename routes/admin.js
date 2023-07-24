@@ -15,7 +15,7 @@ const imagekit = new ImageKit({
 });
 
 
-router.get('/admin/new-product', verifyJwT,async (req, res) =>{
+router.get('/admin/new-product', async (req, res) =>{
   var authenticationParameters = imagekit.getAuthenticationParameters();
   log(authenticationParameters);
   res.json(authenticationParameters);
