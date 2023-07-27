@@ -41,6 +41,11 @@ router.post('/admin/new-product', verifyJwT , async (req, res)=>{
   }
 })
 
+router.post("/admin/delete-product", verifyJwT, async (req, res)=>{
+	
+	res.send("product deleted")
+})
+
 // getting all the orders that have been paid for 
 router.post('/login', authController)
 router.post("/logout", logoutController)
