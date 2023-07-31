@@ -34,16 +34,26 @@ router.post('/admin/new-product', verifyJwT , async (req, res)=>{
   })
 
     console.log(results);
-    res.json({success: "success"})
+    res.status(200).json({success: "success"})
   } catch (err) {
     console.error(err)
     res.json({error : "error"})
   }
 })
 
+// dele products
 router.post("/admin/delete-product", verifyJwT, async (req, res)=>{
 	
-	res.send("product deleted")
+	try {
+
+    imagekit.deleteFile("file_id", function(error, result) {
+      if(error) console.log(error);
+      else console.log(result);
+  });
+    
+  } catch (error) {
+    
+  }
 })
 
 // getting all the orders that have been paid for 
